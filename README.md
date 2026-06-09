@@ -52,28 +52,28 @@ Data source:https://www.kaggle.com/datasets/aiexplorer77/internship-scam-detecti
 
 
 #### Industry:
-Intership post made for each industry.
-AI               111803
-EdTech           111417
-Healthcare       111357
-FinTech          111025
-E-Commerce       111016
-Marketing        111005
-Gaming           110967
-Cybersecurity    110878
-Software         110532
++ Intership post made for each industry.
++ AI               111803
++ EdTech           111417
++ Healthcare       111357
++ FinTech          111025
++ E-Commerce       111016
++ Marketing        111005
++ Gaming           110967
++ Cybersecurity    110878
++ Software         110532
 
 #### Location:
-Location of company
-Sydney           111520
-Toronto          111477
-Bangalore        111441
-San Francisco    111390
-Berlin           110990
-Dubai            110987
-Singapore        110882
-London           110754
-New York         110559
++ Location of company
++ Sydney           111520
++ Toronto          111477
++ Bangalore        111441
++ San Francisco    111390
++ Berlin           110990
++ Dubai            110987
++ Singapore        110882
++ London           110754
++ New York         110559
 
 
 #### Company size:
@@ -124,9 +124,9 @@ Number of years since company establishment.
 
 
 #### Job description lenght:
-Average: 1799
-Max:5000
-Min: 100
++ Average: 1799
++ Max:5000
++ Min: 100
 
 #### Grammatical Errors:
 + On average 2 grammatical error are found in internship post.
@@ -134,31 +134,31 @@ Min: 100
 + Min:0
 
 #### Vague Description score:
-Average: 30
-Max: 100
-Min:0
++ Average: 30
++ Max: 100
++ Min:0
 + More than 7% dataset has zero score i.e 73938.
 
 #### Urgency Score:
-Average: 40
-Max:100
-Min:0
++ Average: 40
++ Max:100
++ Min:0
 + Nearly 6% dataset has zero score i.e 59153.
 
 
 #### Keyword spam score:
-Average:25
-Max:100
-Min: 0
++ Average:25
++ Max:100
++ Min: 0
 + More than 11% dataset has zero score i.e 114428.
 
 #### Fake certification score:
 + 92% post say no fake certification score.
 
 #### Recruiter Experience year:
-Average: 5
-Min:0 
-Max:19
++ Average: 5
++ Min:0 
++ Max:19
 + Nearly 5% dataset has zero experience i.e 49615.
 
 
@@ -170,37 +170,37 @@ Max:19
 + 25% email domain are suspicious.
 
 #### Recruiter response time(in hours):
-Average: 18
-Min:1
-Max:63
++ Average: 18
++ Min:1
++ Max:63
 + Nearly 5% recruiter response in less then 1 hour.
 
 #### Social media presence:
 + 75% dataset say there is the presence in social media.
 
 #### Emotional manipulation score:
-Average: 25
-Min:0
++ Average: 25
++ Min:0
 Max: 100
 + 11.5% dataset score 0 in emotional manipulation score.
 
 #### Phishing language score:
-Average: 20
-Min:0
-Max:100
++ Average: 20
++ Min:0
++ Max:100
 
 + 14.5 dataset score is 0 in Phishing language score.
 
 
 #### Trust singal score:
-Average:56
-Min:0
-Max:100
++ Average:56
++ Min:0
++ Max:100
 
 #### Fraud Score:
-Average:34
-Min:0
-Max:100
++ Average:34
++ Min:0
++ Max:100
 + 5% dataset score is 0 in fraud score.
 
 #### Is fake posting:
