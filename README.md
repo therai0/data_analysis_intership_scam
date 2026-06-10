@@ -6,7 +6,6 @@ This dataset presents a large-scale synthetic simulation of internship and job p
 The dataset combines company verification signals, recruiter behavior, compensation patterns, NLP-inspired scam indicators, and trust-related features to create realistic fraud detection scenarios suitable for machine learning, cybersecurity analytics, exploratory data analysis (EDA), and business intelligence projects.
 
 
-
 Data source:https://www.kaggle.com/datasets/aiexplorer77/internship-scam-detection-dataset
 
 ### Basic overview of dataset:
@@ -26,20 +25,24 @@ Data source:https://www.kaggle.com/datasets/aiexplorer77/internship-scam-detecti
 
 ### Objectives:
 + The main objective of this data analysis is to finding the pattern related to fake intership of job posting.
++ To identify most impactful features for fake posting.
 + To build the Machine learning model for fake intership posting.
 
 ## Univariant data analysis 
 
 #### 1. Internship title:
+Title of the internship or job role
 + For 9 different title internship post are made.
 + Maxium post is for marketing intern(111577).
 
 #### Employment types:
+Type of employment (Internship, Full-Time, Part-Time, Contract)
 + Types of employment: Part-Time, Intership,Contract and full time.
 + Almost euqal number of post are made for each types of employement.
 + Part-Time(250700),Internship(249998),Contract     (249669),Full-Time(249633)
 
 #### Work Mode:
+Work arrangement type (Remote, Hybrid, Onsite)
 + Nearly 55 % of post are made for remote intern.
 + More then 25% post are made for Hybird and 20 % of post are made for Onsite. 
 
@@ -52,6 +55,7 @@ Data source:https://www.kaggle.com/datasets/aiexplorer77/internship-scam-detecti
 
 
 #### Industry:
+Industry sector associated with the posting.
 + Intership post made for each industry.
 + AI               111803
 + EdTech           111417
@@ -64,6 +68,7 @@ Data source:https://www.kaggle.com/datasets/aiexplorer77/internship-scam-detecti
 + Software         110532
 
 #### Location:
+Geographic location of the opportunity.
 + Location of company
 + Sydney           111520
 + Toronto          111477
@@ -77,6 +82,7 @@ Data source:https://www.kaggle.com/datasets/aiexplorer77/internship-scam-detecti
 
 
 #### Company size:
+Estimated organization size category.
 + Maximum number of post are made by startup and small company 
 
 ##### Data visualization in countplot:
@@ -92,54 +98,66 @@ Number of years since company establishment.
 + On average the age of company is 20.
 + 1%(10000) data are missing.
 
-#### Linkedin Presence
+#### Linkedin Presence:
+Indicates whether the company has a LinkedIn presence.
 + 80% of company have presence in linkedin.
 
 #### Website available:
+Indicates whether the company has an official website.
 + Around 85% company have website.
 
 
 #### Domain age in months:
+Estimated website domain age in months.
 + Average:239.
 + Max:500.
 + Min:1.
 
 #### Varification status:
+Simulated company verification status
 + Around 70% post are varfied 
 
 #### Stipend:
+Offered salary or internship stipend amount.
 + On average 35066 
 + Max: 110428
 + Min: 2000
 
 #### Unrealistic salary flag:
+Indicates unusually high or suspicious compensation offers.
 + There is no any unrealistic salary flag in dataset
 
 #### Payment requirement:
+Indicates whether applicants are asked to make a payment.
 + 90% post for intership require no payment.
 
 #### Registration fee:
+Simulated registration or onboarding fee amount.
 + 90% internship doesn't are for registration fee.
 + in 10% , 4999 is the maximum charge for registration fee.
 
 
 #### Job description lenght:
+Length of the job description text.
 + Average: 1799
 + Max:5000
 + Min: 100
 
 #### Grammatical Errors:
+Estimated number of grammatical issues detected in the posting.
 + On average 2 grammatical error are found in internship post.
 + Max:14
 + Min:0
 
 #### Vague Description score:
+Measures how unclear or vague the job description is.
 + Average: 30
 + Max: 100
 + Min:0
 + More than 7% dataset has zero score i.e 73938.
 
 #### Urgency Score:
+Simulated urgency or pressure level used in the posting.
 + Average: 40
 + Max:100
 + Min:0
@@ -147,15 +165,18 @@ Number of years since company establishment.
 
 
 #### Keyword spam score:
+Indicates suspicious or spam-like keyword usage intensity.
 + Average:25
 + Max:100
 + Min: 0
 + More than 11% dataset has zero score i.e 114428.
 
 #### Fake certification score:
+Indicates whether fake certification incentives are offered.
 + 92% post say no fake certification score.
 
 #### Recruiter Experience year:
+Estimated recruiter experience in years.
 + Average: 5
 + Min:0 
 + Max:19
@@ -163,28 +184,34 @@ Number of years since company establishment.
 
 
 #### Recruiter email type:
+Type of recruiter email domain (Corporate or Free).
 + 75% mail for recruiter is corporator.
 + 25% mail is free.
 
 #### Suspicious Email domain:
+Indicates suspicious email provider usage (0 = No, 1 = Yes).
 + 25% email domain are suspicious.
 
 #### Recruiter response time(in hours):
+Estimated recruiter response time in hours.
 + Average: 18
 + Min:1
 + Max:63
 + Nearly 5% recruiter response in less then 1 hour.
 
 #### Social media presence:
+Indicates recruiter social media visibility (0 = No, 1 = Yes).
 + 75% dataset say there is the presence in social media.
 
 #### Emotional manipulation score:
+Simulated emotional persuasion intensity in the posting.
 + Average: 25
 + Min:0
 Max: 100
 + 11.5% dataset score 0 in emotional manipulation score.
 
 #### Phishing language score:
+Measures phishing or scam-related language patterns.
 + Average: 20
 + Min:0
 + Max:100
@@ -193,17 +220,20 @@ Max: 100
 
 
 #### Trust singal score:
+Overall trustworthiness score of the posting and company.
 + Average:56
 + Min:0
 + Max:100
 
 #### Fraud Score:
+Aggregated fraud likelihood score generated from multiple suspicious indicators.
 + Average:34
 + Min:0
 + Max:100
 + 5% dataset score is 0 in fraud score.
 
 #### Is fake posting:
+Target label indicating whether the posting is fraudulent.
 + Around 78% post are not fake and 22% post are fake.
 
 
@@ -215,7 +245,7 @@ Target column: is_fake_posting
 ### Categorical columns vs target column
 
 #### Intership title and target column:
-+ For every internship title percentage of fake post is similar around 22%.
+**Insight**:For every internship title percentage of fake post and real post is similar.  
 
 | Internship Title      | Real Postings (%) | Fake Postings (%) |
 |----------------------|------------------:|------------------:|
@@ -236,9 +266,11 @@ Target column: is_fake_posting
        width="500">
 </p>
 
+**Conclusion**: We can conclude that internship title doesn't appear a strong features to identify the fake post and real post. So we can remove from the dataset during the feature engineering.
+
 
 #### Employment type and target column:
-+ For each employment type real post percentage is around 77%.
+**Insight**:For each employment type real post and fake post  percentage is similar.
 
 | Employment Type | Real Postings (%) | Fake Postings (%) |
 |----------------|------------------:|------------------:|
@@ -254,8 +286,11 @@ Target column: is_fake_posting
        width="500">
 </p>
 
+**Conclusion**: We can conclude that Employment type doesn't appear a strong features to identify the fake post and real post.  So we can remove from the dataset during the feature engineering.
+
+
 #### Work mode and target column:
-+ The number of fake post for the remote work is hingher then any other work mode
+**Insight**: The number of fake post for the remote work is hingher then any other work mode. When a work mode is remote real posting percentage is drop to 75.59% and fake post raise up to 24.41%.
 
 | Work Mode | Real Postings (%) | Fake Postings (%) |
 |-----------|------------------:|------------------:|
@@ -270,9 +305,12 @@ Target column: is_fake_posting
        width="500">
 </p>
 
+**Conclusion**: We can conclude that work mode has a few impact on indentifying the real or fake post. Because when the work mode is remote then it make few change in real and fake post for internship or job.  So we can remove from the dataset during the feature engineering.
+
 
 #### Industry and target column:
-+ Similar kind of infromation we can extract from here also.
+**Insight**: The percentage of real amd fake post for all types of industry remain similar.
+
 | Industry      | Real Postings (%) | Fake Postings (%) |
 |---------------|------------------:|------------------:|
 | AI            | 77.75             | 22.25             |
@@ -285,9 +323,10 @@ Target column: is_fake_posting
 | Marketing     | 77.85             | 22.15             |
 | Software      | 77.83             | 22.17             |
 
-**Insight:** The fake posting rate remains remarkably consistent across all industries (approximately 22%). The difference between the highest (FinTech: 22.34%) and lowest (E-Commerce: 22.10%) fake posting rates is only 0.24 percentage points, suggesting that `industry` provides little discriminatory power for identifying fraudulent job postings.
+**Conclusion**: We can conclude that industry column doesn't make any impact on indentifying the real or fake post. 
 
 #### Location and target column:
+**Insight**: The percentage of real and fake post remains similar for all location in the range between 77% to 78% for real post and 21% to 22% for fake post.
 + | Location      | Real Postings (%) | Fake Postings (%) |
 |--------------|------------------:|------------------:|
 | Bangalore     | 77.43             | 22.57             |
@@ -300,9 +339,11 @@ Target column: is_fake_posting
 | Sydney        | 77.92             | 22.08             |
 | Toronto       | 78.08             | 21.92             |
 
-**Insight:** The fake posting rate is relatively consistent across all locations, ranging from 21.92% (Toronto) to 22.57% (Bangalore). The small variation of only 0.65 percentage points suggests that `location` has minimal influence on whether a job posting is fraudulent.
+**Conclusion**: We can conclude that location feautes doesn't appear as a strong features to identify the real or fake post. So we can remove from the dataset during the feature engineering.
 
 #### Company size and target column:
+
+**Insight:** The fake posting rate is almost identical across all company sizes (~22%). This suggests that `company_size` has very weak predictive power for detecting fraudulent job postings.
 
 | Company Size | Real Postings (%) | Fake Postings (%) |
 |--------------|------------------:|------------------:|
@@ -311,24 +352,32 @@ Target column: is_fake_posting
 | Small        | 77.76             | 22.24             |
 | Startup      | 77.76             | 22.24             |
 
-**Insight:** The fake posting rate is almost identical across all company sizes (~22%). This suggests that `company_size` has very weak predictive power for detecting fraudulent job postings.
+
+**Conclusion**: We can conclude that company size also doesn't appear as a strong features to seperate the fake or real post.So we can remove from the dataset during the feature engineering.
 
 
 #### Linkedin presence and target column:
+**Insight:** LinkedIn presence shows a strong relationship with fraud detection. Companies without a LinkedIn presence have a much higher fake posting rate (39.43%) compared to those with LinkedIn presence (17.91%). This makes `linkedin_presence` one of the most important predictive features in this dataset.
+
 | LinkedIn Presence | Real Postings (%) | Fake Postings (%) |
 |-------------------|------------------:|------------------:|
 | 0 (No)           | 60.57             | 39.43             |
 | 1 (Yes)          | 82.09             | 17.91             |
 
-**Insight:** LinkedIn presence shows a strong relationship with fraud detection. Companies without a LinkedIn presence have a much higher fake posting rate (39.43%) compared to those with LinkedIn presence (17.91%). This makes `linkedin_presence` one of the most important predictive features in this dataset.
+
+**Conclusion**: We can conclude that linkedin presence features if the impactful features to identify the fake or real post.
+
 
 #### Website available and target column:
+
+**Insight:** Website availability is a strong indicator of job authenticity. Companies without a website have a much higher fake posting rate (40.90%) compared to companies with a website (18.88%). This suggests that `website_available` is an important feature for detecting fraudulent job postings.
+
 | Website Available | Real Postings (%) | Fake Postings (%) |
 |-------------------|------------------:|------------------:|
 | 0 (No)           | 59.10             | 40.90             |
 | 1 (Yes)          | 81.12             | 18.88             |
 
-**Insight:** Website availability is a strong indicator of job authenticity. Companies without a website have a much higher fake posting rate (40.90%) compared to companies with a website (18.88%). This suggests that `website_available` is an important feature for detecting fraudulent job postings.
+**Conclusion**: We can conclude that website available is also the strong features to identify the real or fake post.
 
 #### Verification status and target column:
 | Verification Status | Real Postings (%) | Fake Postings (%) |
