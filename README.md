@@ -380,187 +380,223 @@ Target column: is_fake_posting
 **Conclusion**: We can conclude that website available is also the strong features to identify the real or fake post.
 
 #### Verification status and target column:
+**Insight**:Verification status shows a mild relationship with fraud detection. Verified companies have a slightly lower fake posting rate (21.06%) compared to non-verified ones (24.85%).
 | Verification Status | Real Postings (%) | Fake Postings (%) |
 | ------------------- | ----------------: | ----------------: |
 | 0 (Not Verified)    |             75.15 |             24.85 |
 | 1 (Verified)        |             78.94 |             21.06 |
 
-**Insight:** Verification status shows a mild relationship with fraud detection. Verified companies have a slightly lower fake posting rate (21.06%) compared to non-verified ones (24.85%). However, the difference is small, suggesting that `verification_status` is a weak but slightly useful feature.
+**Insight:** We can conclude that verification status is has slightly impact on seperating the fake or real post.
 
 
 #### Payment required and target column:
+**Insight:** Payment requirement is a very strong indicator of fraudulent job postings. When payment is required, the fake posting rate rises dramatically to 68.87%, compared to only 17.02% when no payment is required. This makes `payment_required` one of the strongest predictive features in the dataset.
+
 | Payment Required | Real Postings (%) | Fake Postings (%) |
 |------------------|------------------:|------------------:|
 | 0 (No)          | 82.98             | 17.02             |
 | 1 (Yes)         | 31.13             | 68.87             |
 
-**Insight:** Payment requirement is a very strong indicator of fraudulent job postings. When payment is required, the fake posting rate rises dramatically to 68.87%, compared to only 17.02% when no payment is required. This makes `payment_required` one of the strongest predictive features in the dataset.
+**Conclusion:** So we can conclude that Payment requirement features could be the one of the strongest features for fake post detection.
 
 
 #### Fake certificate offer and target column:
+**Insight:** Fake certificate offers are a strong indicator of fraudulent job postings. When a certificate is offered, the fake posting rate increases significantly to 51.27%, compared to only 19.67% when no certificate is offered. This makes `fake_certificate_offer` a highly predictive feature for fraud detection.
+
 | Fake Certificate Offer | Real Postings (%) | Fake Postings (%) |
 |------------------------|------------------:|------------------:|
 | 0 (No)                | 80.33             | 19.67             |
 | 1 (Yes)               | 48.73             | 51.27             |
-
-**Insight:** Fake certificate offers are a strong indicator of fraudulent job postings. When a certificate is offered, the fake posting rate increases significantly to 51.27%, compared to only 19.67% when no certificate is offered. This makes `fake_certificate_offer` a highly predictive feature for fraud detection.
+**Conclusion:** So we can conclude that Fake Certificate Offer features could be the one of the strongest features for fake post detection.
 
 
 #### Recruiter emial type and target column:
+
+**Insight:** Recruiter email type is a strong indicator of job authenticity. Corporate email domains are associated with a much lower fake posting rate (16.91%), while free email domains show a significantly higher fake posting rate (37.99%). This makes `recruiter_email_type` an important feature for fraud detection.
+
 | Recruiter Email Type | Real Postings (%) | Fake Postings (%) |
 |----------------------|------------------:|------------------:|
 | Corporate           | 83.09             | 16.91             |
 | Free                | 62.01             | 37.99             |
 
-**Insight:** Recruiter email type is a strong indicator of job authenticity. Corporate email domains are associated with a much lower fake posting rate (16.91%), while free email domains show a significantly higher fake posting rate (37.99%). This makes `recruiter_email_type` an important feature for fraud detection.
-
+**Conclusion:** So we can conclude that Recruiter Email Type features could be the one of the strongest features for fake post detection.
 
 
 #### Social media presence and target column:
+**Insight:** Social media presence does not show any meaningful relationship with job authenticity. The fake posting rate remains almost identical whether social media is present or not (~75%). This indicates that `social_media_presence` has little to no predictive power for fraud detection in this dataset.
+
 | Social Media Presence | Real Postings (%) | Fake Postings (%) |
 |----------------------|------------------:|------------------:|
 | 0 (No)              | 24.98             | 75.02             |
 | 1 (Yes)             | 25.14             | 74.86             |
 
-**Insight:** Social media presence does not show any meaningful relationship with job authenticity. The fake posting rate remains almost identical whether social media is present or not (~75%). This indicates that `social_media_presence` has little to no predictive power for fraud detection in this dataset.
+**Conclusion**: We can conclude that social media presence does not have huge impact on seperating the fake or real post so we can remove this features.
+
 
 #### Suspicious email domain and target column:
+**Insight:** Suspicious email domains are strongly associated with fraudulent job postings. When a suspicious email domain is used, the fake posting rate increases to 37.99%, compared to only 16.91% for non-suspicious domains. This makes `suspicious_email_domain` a strong predictive feature for fraud detection.
+
 | Suspicious Email Domain | Real Postings (%) | Fake Postings (%) |
 |------------------------|------------------:|------------------:|
 | 0 (Not Suspicious)     | 83.09             | 16.91             |
 | 1 (Suspicious)         | 62.01             | 37.99             |
 
-**Insight:** Suspicious email domains are strongly associated with fraudulent job postings. When a suspicious email domain is used, the fake posting rate increases to 37.99%, compared to only 16.91% for non-suspicious domains. This makes `suspicious_email_domain` a strong predictive feature for fraud detection.
+**Conclusion:** So we can conclude that Suspicious email domain features could be the one of the strongest features for fake post detection.
 
 ## Numeric columns and target column
 
 #### Company age and target column:
 
+**Insight**: We can observe that there is slightly difference between the fake and real post in all quartile,mean and std.
+
 | is_fake_posting | Count   | Mean      | Std       | Min | 25% | 50% | 75% | Max |
 |-----------------|---------|-----------|-----------|-----|-----|-----|-----|-----|
 | 0               | 770,242 | 20.178987 | 11.159887 | 1.0 | 11.0 | 20.0 | 30.0 | 39.0 |
-| 1               | 219,758 | 19.373443 | 11.547607 | 1.0 | 9.0 | — | — | — |
+| 1               | 219,758 | 19.373443 | 11.547607 | 1.0 | 9.0 | 19.0 | 29.0 | 39.0 |
 
-**Insight**: The feature does not appear to strongly distinguish fake postings from real postings.
+**Conclusion**: The feature does not appear to strongly distinguish fake postings from real postings so we can remove this feature.
 
 #### Domain age(in months) and target column:
+**Insight**: We can observe that the stat of domain age column is slightly difference between the fake and real post in all quartile,mean and std.
+
 | is_fake_posting | Count   | Mean      | Std       | Min | 25% | 50% | 75% | Max |
 |-----------------|---------|-----------|-----------|-----|-----|-----|-----|-----|
 | 0 (Real)        | 778,042 | 241.672063 | 134.636149 | 1.0 | 126.0 | 242.0 | 357.0 | 500.0 |
 | 1 (Fake)        | 221,958 | 232.071806 | 139.274324 | 1.0 | 110.0 | 232.0 | 352.0 | 500.0 |
 
-**Insight**: Real postings tend to have slightly higher values for this feature than fake postings
+**Conclusion**: Real postings tend to have slightly higher values for this feature than fake postings. But we can consider this features as a strong feature.
 
 #### Stipend and target column:
+
+**Insigth**: We can observe that the stat of Stipend column is slightly difference between the fake and real post in all quartile,mean and std.
 
 | is_fake_posting | Count   | Mean       | Std        | Min    | 25%     | 50%      | 75%      | Max      |
 |-----------------|---------|------------|------------|--------|----------|-----------|-----------|----------|
 | 0 (Real)        | 770,238 | 35,072.26  | 14,823.21  | 2,000  | 24,857   | 34,988    | 45,121    | 110,428  |
 | 1 (Fake)        | 219,762 | 35,044.95  | 14,854.04  | 2,000  | 24,794   | 34,966.5  | 45,145    | 98,828   |
 
-**Insight**: Real and fake postings have virtually the same average value for this feature.
+**Conclusion**: We can conclude that stipend column also doesn't appear as a strong features. So we can remove it.
 
 #### Registration fee and target column:
+**Insight**: Fake postings have an average value almost 8 times larger than real postings.
 | is_fake_posting | Count   | Mean      | Std       | Min | 25% | 50% | 75% | Max  |
 |-----------------|---------|-----------|-----------|-----|-----|-----|------|------|
 | 0 (Real)        | 778,042 | 100.72    | 570.52    | 0   | 0   | 0   | 0    | 4,999 |
 | 1 (Fake)        | 221,958 | 782.67    | 1,413.44  | 0   | 0   | 0   | 1,005| 4,999 |
 
-**Insight**: Fake postings have an average value almost 8 times larger than real postings.
+**Conclusion**: We can conclude that registration fee could be a slightly impactful feature of seperating fake or real post.
 
 #### Job description lenght and target column:
 
+**Insight**: The stat of real and fake post is almost identical.
 | is_fake_posting | Count   | Mean      | Std      | Min  | 25%  | 50%  | 75%  | Max  |
 |-----------------|---------|-----------|----------|------|------|------|------|------|
 | 0 (Real)        | 778,042 | 1799.71   | 598.70   | 100  | 1394 | 1799 | 2203 | 5000 |
 | 1 (Fake)        | 221,958 | 1798.95   | 598.09   | 100  | 1395 | 1799 | 2202 | 4521 |
 
-**Insight**: Real and fake postings have nearly identical average values (1799.71 vs 1798.95).
+**Conclusion**: We can conclude that job description column doesn't appear as a strong features. So we can remove it.
 
 
 #### Grammatical Error and target column:
-
+**Insight**: In grammatical column also the stat of real and fake post is similar
 | is_fake_posting | Mean  | Median | Min | Max |
 |-----------------|-------|--------|-----|-----|
 | 0 (Real)        | 2.896 | 3.0    | 0   | 13  |
 | 1 (Fake)        | 3.358 | 3.0    | 0   | 14  |
 
-**Insight**:Fake job postings have a higher average value (3.36) than real postings (2.90).
+**Conclusion**: We can conclude that grammatical error doesn't make high impact on seperating the fake or real post.
 
 #### Vague description score and target column:
+
+**Insight**: We can see that stat of fake is higher then real post in vagure description column.
 
 | is_fake_posting | Count   | Mean  | Std   | Min | 25% | 50% | 75% | Max |
 |-----------------|---------|-------|-------|-----|-----|-----|-----|-----|
 | 0 (Real)        | 778,042 | 27.69 | 18.01 | 0   | 14  | 27  | 40  | 100 |
 | 1 (Fake)        | 221,958 | 38.69 | 19.05 | 0   | 26  | 39  | 52  | 100 |
 
-**Conclusion**: Fake job postings consistently exhibit higher values for this feature across all percentiles. The clear difference in mean and median suggests a strong relationship with fraudulent postings, making this feature a valuable indicator for classification models.
+**Conclusion**: The difference in stat of fake and real post make the features more impactful to seperate the fake or real post.
 
 #### Urgency score and target column:
+**Insight**: We can see that stat of fake is higher then real post in Urgency score column.
 | is_fake_posting | Count   | Mean  | Std   | Min | 25% | 50% | 75% | Max |
 |-----------------|---------|-------|-------|-----|-----|-----|-----|-----|
 | 0 (Real)        | 778,042 | 38.26 | 23.24 | 0   | 21  | 38  | 54  | 100 |
 | 1 (Fake)        | 221,958 | 46.31 | 23.83 | 0   | 29  | 46  | 63  | 100 |
 
-**Conclusion**: This is a high-impact feature. Fake job postings exhibit a clear upward shift in distribution across mean, median, and quartiles, making it a strong candidate for fraud detection modeling.
+**Conclusion**: The difference in stat of fake and real post make the features more impactful to seperate the fake or real post.
 
 #### Keyword spam and target column:
+**Insight**: We can see that stat of fake is higher then real post in Keyword spam column.
 
 | is_fake_posting | Count   | Mean  | Std   | Min | 25% | 50% | 75% | Max |
 |-----------------|---------|-------|-------|-----|-----|-----|-----|-----|
 | 0 (Real)        | 778,042 | 24.51 | 17.80 | 0   | 10  | 23  | 37  | 100 |
 | 1 (Fake)        | 221,958 | 29.31 | 18.72 | 0   | 15  | 29  | 42  | 100 |
 
-**Conclusion**:Fake job postings consistently show higher values across all percentiles, indicating a moderate but reliable signal that can improve fraud detection performance when used in combination with other features.
+**Conclusion**: The difference in stat of fake and real post make the features more impactful to seperate the fake or real post.
 
 
 #### Recruiter experience year and target column:
+
+**Insight**: The stat of real and fake post is almost identical for recruiter experience year column.
 | is_fake_posting | Count   | Mean  | Std  | Min | 25% | 50% | 75% | Max |
 |-----------------|---------|-------|------|-----|-----|-----|-----|-----|
 | 0 (Real)        | 778,042 | 5.05  | 2.87 | 0   | 3   | 5   | 7   | 19.6 |
 | 1 (Fake)        | 221,958 | 5.04  | 2.87 | 0   | 3   | 5   | 7   | 17.9 |
 
-**Conclusion**: This feature shows almost identical distributions for real and fake job postings across all statistics, indicating it is not useful for fraud posting detection.
+**Conclusion**: So we can conclude that this feature doesn't show any impact on seperating the real or fake post.
 
 #### Recruiter response time and target column:
+**Insight**: The stat of real and fake post is almost identical for Recruiter response time column.
+
 | is_fake_posting | Count   | Mean  | Std  | Min | 25% | 50% | 75% | Max |
 |-----------------|---------|-------|------|-----|-----|-----|-----|-----|
 | 0 (Real)        | 778,042 | 18.18 | 9.61 | 1.0 | 11.2 | 18.0 | 24.8 | 63.9 |
 | 1 (Fake)        | 221,958 | 18.19 | 9.60 | 1.0 | 11.3 | 18.0 | 24.7 | 63.5 |
 
-**Conclusion**:The feature shows identical statistical behavior for real and fake job postings, indicating no discriminative ability and negligible value for fraud detection.
+**Conclusion**: We can conclude that recruiter response time doesn't have a huge impact on seperating fake and real post.So we can remove this features.
 
 
 #### Emotional manipulation score and target column:
+
+**Insight**: The stat of real and fake post is almost identical for Emotional manipulation score column.
+
 | is_fake_posting | Count   | Mean  | Std   | Min | 25% | 50% | 75% | Max |
 |-----------------|---------|-------|-------|-----|-----|-----|-----|-----|
 | 0 (Real)        | 778,042 | 25.57 | 18.13 | 0   | 11  | 24  | 38  | 100 |
 | 1 (Fake)        | 221,958 | 25.55 | 18.14 | 0   | 11  | 24  | 38  | 100 |
 
-**Conslusion**: This feature shows identical statistical behavior for both real and fake job postings, indicating it has no discriminative power for detecting fraudulent listings.
+**Conclusion**: We can conclude that Emotional manipulation score doesn't have a huge impact on seperating fake and real post. So we can remove this features.
+
 
 
 #### Phishing language score and target column:
+**Insight**: The stat of fake post is higher then real post. So it shows that phishing language score could be a impactful features for seperating the fake or real post.
 | is_fake_posting | Count   | Mean  | Std   | Min | 25% | 50% | 75% | Max |
 |-----------------|---------|-------|-------|-----|-----|-----|-----|-----|
 | 0 (Real)        | 778,042 | 18.39 | 14.81 | 0   | 5   | 17  | 29  | 100 |
 | 1 (Fake)        | 221,958 | 29.03 | 16.72 | 0   | 17  | 29  | 41  | 100 |
 
-**Conclusion**:This feature shows a strong upward shift in distribution for fake job postings across mean, median, and all quartiles, making it a highly informative predictor for fraud detection.
+**Conclusion**: We can conclude that phishing language score is the important feature for seperating the fake and real post.
 
 #### Trust singal score and target column:
+
+**Insight**: The state of real post is higher then fake post in trust signal score. Higher the trust signal more chance of real post.
 | is_fake_posting | Count   | Mean  | Std   | Min | 25% | 50% | 75% | Max |
 |-----------------|---------|-------|-------|-----|-----|-----|-----|-----|
 | 0 (Real)        | 770,280 | 59.93 | 14.97 | 0   | 49.7 | 60.1 | 70.3 | 100 |
 | 1 (Fake)        | 219,720 | 44.72 | 15.52 | 0   | 34.2 | 44.8 | 55.3 | 100 |
 
-**Conclusion**:Fake job postings show a consistent and significant decrease across all statistical measures, indicating this feature is a strong negative indicator of fraud and highly valuable for model training.
+**Conclusion**: We can conclude that trust singal is the impactful features for seperating the real or fake post.
 
 #### Fraud score and target column:
+**Insight**: We can clearly see that average of fraud score for fake post is almost 2.5x larger then real post and also in every other stat fake post  fraud score is higher then real post in huge margin.
+
 | is_fake_posting | Count   | Mean  | Std   | Min | 25% | 50% | 75% | Max |
 |-----------------|---------|-------|-------|-----|-----|-----|-----|-----|
 | 0 (Real)        | 778,042 | 25.29 | 14.24 | 0   | 14.4 | 26.2 | 37.0 | 50  |
 | 1 (Fake)        | 221,958 | 64.57 | 12.12 | 50  | 55   | 61.4 | 71.1 | 100 |
 
-**Conclusion**:This feature shows near-perfect separation between real and fake job postings with a clear threshold around 50, making it a highly powerful predictor for fraud detection.
+**Conclusion**: So we can conclude that fraud score is the one of the strongest features for seperating the fake or real post.
 
