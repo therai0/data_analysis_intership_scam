@@ -245,7 +245,7 @@ Target column: is_fake_posting
 ### Categorical columns vs target column
 
 #### Intership title and target column:
-**Insight**:For every internship title percentage of fake post and real post is similar.  
+**Insight**:The state for fake post and real post for all internship title is identical.
 
 | Internship Title      | Real Postings (%) | Fake Postings (%) |
 |----------------------|------------------:|------------------:|
@@ -464,7 +464,7 @@ Target column: is_fake_posting
 | 0 (Real)        | 778,042 | 241.672063 | 134.636149 | 1.0 | 126.0 | 242.0 | 357.0 | 500.0 |
 | 1 (Fake)        | 221,958 | 232.071806 | 139.274324 | 1.0 | 110.0 | 232.0 | 352.0 | 500.0 |
 
-**Conclusion**: Real postings tend to have slightly higher values for this feature than fake postings. But we can consider this features as a strong feature.
+**Conclusion**: Real postings tend to have slightly higher values for this feature than fake postings. But we can't consider this features as a strong feature.
 
 #### Stipend and target column:
 
